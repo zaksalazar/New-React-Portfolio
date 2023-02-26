@@ -10,7 +10,7 @@ export const Card = ({ data, isActive }) => {
         }`}
       >
         <div
-          style={{ backgroundImage: `url(${data.logo})` }}
+          style={{ backgroundImage: `url(https://scitechdaily.com/images/Human-Brain-Memories-Neurons.jpg?ezimgfmt=ng%3Awebp%2Fngcb2%2Frs%3Adevice%2Frscb2-1)` }}
           className="rounded-xl w-full bg-top-center bg-cover rounded-b-none h-64"
         ></div>
         <div className="p-4">

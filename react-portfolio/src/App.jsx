@@ -11,7 +11,14 @@ export default function App() {
   <div class="bg-gradient-to-t from-gray-700 via-gray-900 to-black min-h-screen">
     <Navbar /> 
     <Hero />
-    <Card />
+    <div>
+    <Card 
+    logo= ".../././assets/openminded.png"
+    description="Open Minded"
+    name="Open Minded"
+    link="https://github.com/zaksalazar/Open-Minded"
+    />
+    </div> 
 </div>
   )
 }
