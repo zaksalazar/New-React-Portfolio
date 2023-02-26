@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar"
 import Hero from "./components/hero"
 import Projectcard from "./components/Projectcard";
+import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import { FaGithub } from 'react-icons/fa';
 import { Fragment as Fragment2 } from "react";
@@ -57,6 +58,7 @@ export default function App() {
     link="https://github.com/zaksalazar/My-text-editor"
     />
     </div> 
+    <Resume />
     <Footer />
 </div>
   )
