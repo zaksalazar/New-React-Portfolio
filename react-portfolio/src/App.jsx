@@ -14,7 +14,7 @@ export default function App() {
     <div>
     <Card 
     logo= ".../././assets/openminded.png"
-    description="Open Minded"
+    description="A video chat app that creates a safe space for users to debate the major issues facing our society."
     name="Open Minded"
     link="https://github.com/zaksalazar/Open-Minded"
     />
