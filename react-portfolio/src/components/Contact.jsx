@@ -29,9 +29,9 @@ const Contact = () => {
   };
 
   return (
-    <StyledContactForm id="contact" class="flex items-center justify-center">
+    <StyledContactForm id="contact" className="flex items-center justify-center">
       <form
-        class="flex items-center justify-center border-8 border-indigo-600 "
+        class="border-8 border-indigo-600"
         ref={form}
         onSubmit={sendEmail}
       >
