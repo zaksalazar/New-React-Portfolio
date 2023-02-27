@@ -11,8 +11,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start"
-    
-    
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
