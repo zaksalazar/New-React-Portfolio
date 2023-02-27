@@ -2,13 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="bg-neutral-200 text-center text-white dark:bg-neutral-600">
+    <footer class=" mt-10 bg-neutral-200 text-center text-white dark:bg-neutral-600 flex items-center justify-center">
       <div class="container pt-9">
         <div class="mb-9 flex justify-center">
           <a href="https://www.instagram.com/the_ranger_zak_show/?hl=en" class="mr-9 text-neutral-800 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
+              class="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/zach-salazar-160450263/" class="mr-9 text-neutral-800 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
+              class="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -28,7 +28,7 @@ const Footer = () => {
           <a href="https://github.com/zaksalazar" class="text-neutral-800 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4"
+              class="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
