@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { Fragment as Fragment2 } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import openMindedImg from "./assets/openminded.png";
+import hapNin from "./assets/HappenIn.png";
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
           site=" https://open-minded.herokuapp.com/"
         />
         <Projectcard
-          image="../../../assets/HappenIn.png"
+          image={hapNin}
           description="An app that allows users to fine live events based on city, date, and genre"
           name="Happenin"
           link="https://github.com/zaksalazar/HappenIn"
