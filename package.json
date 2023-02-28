@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d src",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "buildndeploy": "npm run build && sudo netlify deploy --prod"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
