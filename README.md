@@ -26,3 +26,4 @@ Open the console when submitting an email in the form to ensure your 'message wa
 https://github.com/zaksalazar/React-Portfolio
 
 ## Deployed Site 
+https://master--frolicking-granita-07671b.netlify.app/

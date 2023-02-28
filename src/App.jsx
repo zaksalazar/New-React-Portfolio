@@ -9,6 +9,8 @@ import { Fragment as Fragment2 } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import openMindedImg from "./assets/openminded.png";
 import hapNin from "./assets/HappenIn.png";
+import scheduler from"./assets/scheduler.png"; 
+import note from "./assets/note.png";
 
 export default function App() {
   return (
@@ -38,14 +40,14 @@ export default function App() {
           site="https://zaksalazar.github.io/weather/"
         />
         <Projectcard
-          image="../../../assets/scheduler.png"
+          image={scheduler}
           description="A helpful scheduling application to schedule your daily tasks"
           name="Work Day Scheduler"
           site="https://zaksalazar.github.io/Scheduler/"
           link="https://github.com/zaksalazar/Scheduler"
         />
         <Projectcard
-          image="../../../assets/note.png"
+          image={note}
           description="An application that allows users to add, edit, and delete important notes"
           name="Note Taker"
           site="https://infinite-beyond-09525.herokuapp.com/"
