@@ -1,97 +1,48 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import styled from "styled-components";
+import React, {useRef, useState} from 'react'
+import emailjs from '@emailjs/browser'
 
-// npm i @emailjs/browser
+export default function Contact() {
+    const form = useRef();
+    const [displayMessage, setDisplayMessage] = useState("");
+    const [error, setError] = useState(false);
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-const Contact = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_e20vl3j",
-        "template_fxm9xan",
-        form.current,
-        "LOJPL1MFGZzmuOjQV"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
+        emailjs.sendForm('service_6nh3e1b', 'template_ojpopop', form.current, '-0hL-IrbUvZEmn6I_')
+          .then((result) => {
+              console.log(result.text);
+               e.target.reset()
+            setDisplayMessage('Your message was sent successfully!');
+          }, (error) => {
+              console.log(error.text);
+            setError(true)
+            setDisplayMessage('Your message was not sent!');
+          });
+      };
   return (
-    <StyledContactForm id="contact" className="flex items-center justify-center">
-      <form
-        class="border-8 border-indigo-600"
-        ref={form}
-        onSubmit={sendEmail}
-      >
-        <label class="text-white">Name</label>
-        <input type="text" name="user_name" />
-        <label class="text-white">Email</label>
-        <input type="email" name="user_email" />
-        <label class="text-white">Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-    </StyledContactForm>
-  );
-};
 
-export default Contact;
-
-// Styles
-const StyledContactForm = styled.div`
-  width: 400px;
-  form {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-    font-size: 16px;
-    input {
-      width: 100%;
-      height: 35px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-    textarea {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-      max-height: 100px;
-      min-height: 100px;
-      padding: 7px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid rgb(220, 220, 220);
-      &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
-      }
-    }
-    label {
-      margin-top: 1rem;
-    }
-    input[type="submit"] {
-      margin-top: 2rem;
-      cursor: pointer;
-      background: rgb(249, 105, 14);
-      color: white;
-      border: none;
-    }
-  }
-`;
+    <div id="contact" className='max-w-[1040px] m-auto md:pl-20 p-4 py-16'>
+        <h1 className='text-white py-4 text-4xl font-bold text-center text-[#001b53]'>Contact</h1>
+        <form ref={form} onSubmit={sendEmail}>
+            <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
+                <div className='flex flex-col'>
+                    <label className='text-white uppercase text-sm py-2'>Name</label>
+                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" name='user_name' required/>
+                </div>
+            </div>
+            <div className='flex flex-col py-2'>
+                <label className='text-white uppercase text-sm py-2'>Email</label>
+                <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email" name='user_email' required />
+            </div>
+            <div className='flex flex-col py-2'>
+                <label className='text-white uppercase text-sm py-2'>Message</label>
+                <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' name='message'required/>
+                <input type="submit" value="Send" className='bg-blue-700 text-gray-100 mt-4 w-full p-4 rounded-lg'  />
+            </div>
+        </form>
+        <div className={error?"bg-red-500":"bg-green-500"}>
+        {displayMessage}
+        </div>
+    </div>
+  )
+}
